@@ -1,0 +1,13 @@
+version: "1"
+services:
+  toolbox-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # 镜像名称
+    image: drummerhonglin/practice-syt
+    ports:
+      - 5002:80
+    restart: always
+    # 容器名称
+    container_name: "practice-syt"

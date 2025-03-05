@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .expanding-box {
+      width: 200px;
+      height: 200px;
+      background-color: #f1f1f1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expanding-content {
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: height 0.5s ease, visibility 0s linear 0.5s;
+    }
+
+    .expanding-box:hover .expanding-content {
+      height: 200px;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+  </style>
+</head>
+<body>
+  <div class="expanding-box">
+    <div class="expanding-content">
+      <p>This is the expanding content.</p>
+    </div>
+  </div>
+</body>
+</html>
